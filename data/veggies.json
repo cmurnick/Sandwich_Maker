@@ -1,0 +1,10 @@
+{
+    "veggies": 
+        {
+            "Lettuce": 0.10,
+            "Tomato": 0.15,
+            "Alfalfa Sprouts": 0.25,
+            "No Veggies": 0.10
+        }
+   	
+};
