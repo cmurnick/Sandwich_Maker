@@ -1,0 +1,10 @@
+{
+    "condiments": 
+        {
+            "Honey Mustard": 0.25,
+            "Mayo": 0.35,
+            "Ranch": 0.45,
+            "No Sauce": 0.00
+        }
+    
+};

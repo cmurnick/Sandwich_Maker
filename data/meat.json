@@ -1,0 +1,10 @@
+{
+    "meat": 
+        {
+            "Turkey": 1.00,
+            "Salami": 1.25,
+            "Roast Beef": 1.50,
+            "No Meat": 0
+        }
+    
+};
