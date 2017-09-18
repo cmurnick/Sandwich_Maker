@@ -49,7 +49,7 @@ const veggiesLoad = function() {
 	let veggiesArray = JSON.parse(this.responseText).veggies;
 	console.log("Veggies array", veggiesArray);
 	dom.domStrings("Choose your veggies:", veggiesArray);
-	// loadMeats(whenMeatsLoad, errorFunction);
+	eventListener.rewriteEvent();
 };
 
 // TODO: set up 'initializer' - load gifs

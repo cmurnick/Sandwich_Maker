@@ -14,7 +14,7 @@ const checkBox = document.getElementById("output");
 const rewriteEvent = () => {
 	checkBox.addEventListener("change", function(e) {
 		console.log(e);
-	var inputs = main.document.getElementsByTagName("input");
+	var inputs = document.getElementsByTagName("input");
 	var priceArray = 0;
 	var chosenToppings = '';
 	
@@ -34,4 +34,4 @@ const rewriteEvent = () => {
 	    }) ;
 	};
 
-module.exports = rewriteEvent;
+module.exports = {rewriteEvent};

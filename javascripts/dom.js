@@ -13,8 +13,12 @@ const outputDiv = document.getElementById('output');
 const domStrings = (message, input) => {
  	
     let price = Object.values(input);
+    console.log(price);
     let name = Object.keys(input);
+    console.log(name);
     let sandwichString = '';
+    
+
    
   	var domString2 = `<h3> ${message}</h3>`;
     
