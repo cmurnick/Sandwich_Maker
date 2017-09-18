@@ -1,11 +1,12 @@
 "use strict";
 
-const printToDom = require('./dom');
+const eventListener = require('./eventListener');
+const dom = require('./dom');
 const breads = require('./bread');
-const Cheeses = require('./cheese');
-const Condiments = require('./condiments');
-const Meats = require('./meat');
-const Veggies = require('./veggies');
+const cheeses = require('./cheese');
+const condiments = require('./condiments');
+const meats = require('./meat');
+const veggies = require('./veggies');
 
 let sandwichArray = [];
 
@@ -18,12 +19,38 @@ const errorFunction = () => {
 const breadsLoad = function() {
 	let breadArray = JSON.parse(this.responseText).bread;
 	console.log("Bread Array", breadArray);
-// 	writeToDom("Choose your bread:", breadArray);
-// 	loadMeats(whenMeatsLoad, errorFunction);
+	dom.domStrings("Choose your bread:", breadArray);
+	cheeses.loadCheeses(cheesesLoad, errorFunction);
+	// (whenMeatsLoad, errorFunction);
 };
 
+const cheesesLoad = function() {
+	let cheeseArray = JSON.parse(this.responseText).cheese;
+	console.log("Cheese array", cheeseArray);
+	dom.domStrings("Choose your cheese:", cheeseArray);
+	condiments.loadCondiments(condimentsLoad, errorFunction);
+};
 
+const condimentsLoad = function() {
+	let condimentsArray = JSON.parse(this.responseText).condiments;
+	console.log("Condiments array", condimentsArray);
+	dom.domStrings("Choose your condiments:", condimentsArray);
+	meats.loadMeats(meatsLoad, errorFunction);
+};
 
+const meatsLoad = function() {
+	let meatsArray = JSON.parse(this.responseText).meat;
+	console.log("Meats array", meatsArray);
+	dom.domStrings("Choose your meat:", meatsArray);
+	veggies.loadVeggies(veggiesLoad, errorFunction);
+};
+
+const veggiesLoad = function() {
+	let veggiesArray = JSON.parse(this.responseText).veggies;
+	console.log("Veggies array", veggiesArray);
+	dom.domStrings("Choose your veggies:", veggiesArray);
+	// loadMeats(whenMeatsLoad, errorFunction);
+};
 
 // TODO: set up 'initializer' - load gifs
 const initializer = () => {

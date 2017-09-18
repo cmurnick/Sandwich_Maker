@@ -8,4 +8,4 @@ const loadCheeses = (onCheeseLoad, errorList) => {
 	cheeseLoader.send();
 };
 
-module.exports = loadCheeses;
+module.exports = {loadCheeses};

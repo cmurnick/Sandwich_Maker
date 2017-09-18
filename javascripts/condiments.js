@@ -8,4 +8,4 @@ const loadCondiments = (onCondimentLoad, errorList) => {
 	condimentLoader.send();
 };
 
-module.exports = loadCondiments;
+module.exports = {loadCondiments};

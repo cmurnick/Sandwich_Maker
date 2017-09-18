@@ -8,4 +8,4 @@ const loadMeats = (onMeatLoad, errorList) => {
 	meatLoader.send();
 };
 
-module.exports = loadMeats;
+module.exports = {loadMeats};
