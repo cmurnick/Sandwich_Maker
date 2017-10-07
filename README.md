@@ -1,4 +1,4 @@
-# Sandwich Maker
+# Sandwich_Maker
 
 ## Summary of Project:
 - In this project, we took our existing iife sandwich project and  browserified it.  We had to use the Grunt file for linting and used multiple resources to pull data into the project.  The end goal was to have it look and function the same way IIFE Sandwich Maker did.
